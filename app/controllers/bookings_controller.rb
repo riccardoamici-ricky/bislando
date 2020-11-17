@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
 
   private
 
-  def cocktail_params
+  def booking_params
     params.require(:booking).permit(:start_time, :end_time)
   end
 end
