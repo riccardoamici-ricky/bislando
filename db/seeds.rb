@@ -5,14 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Island.destroy_all
 User.destroy_all
+
+
 
 puts 'creating users'
  laura = User.create(email: 'laura@gmail.com', password: '123456')
  ricky = User.create(email: 'ricky@gmail.com', password: '123456')
  peter = User.create(email: 'peter@gmail.com', password: '123456')
 puts 'users created'
+
+puts 'now creating islands'
+
+
 
 borabora = Island.create!(user: laura, name: 'Bora Bora', description: 'It is so romantic', price: 10000000, type_of_event: "Wedding party", capacity: 35)
 insel = Island.create!(user: laura, name: 'Insel Lindweder', description: "We've got the best sound-system for your Techno parties", price: 5000, type_of_event: "Techno party", capacity: 100)
@@ -25,4 +31,3 @@ azura = Island.create!(user: ricky, name: 'Azura', description: 'say YES in heav
 corvo = Island.create!(user: peter, name: 'Corvo Island', description: 'Psytrance and a vulcano? Say no more!', price: 800000, type_of_event: "Goa party", capacity: 100)
 fula = Island.create!(user: peter, name: 'Fula Island', description: 'Party like a Viking', price: 8000000, type_of_event: "Stag party", capacity: 40)
 mindoro = Island.create!(user: peter, name: 'Mindoro', description: 'All the single ladies welcome!', price: 90000000, type_of_event: "Bachelorette party", capacity: 65)
-
