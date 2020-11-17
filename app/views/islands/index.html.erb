@@ -1,9 +1,24 @@
-<div class="container">
-  <h1>All our islands</h1>
-  <ul>
-    <% @islands.each do |island| %>
-    <li><%= link_to island.name, island_path(island) %></li>
-    <% end %>
-  </ul>
-</div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn.cnn.com/cnnnext/dam/assets/180219103122-zanzibar-and-its-islands---mnemba-a-view-from-the-sky-mnemba-island-lodge.jpg);">
+  <div class="container">
+    <h1 class="banner-h1">BISLANDO</h1>
+  </div>
+</div><br>
 
+<div class="container">
+  <h1>Islands in the selected map area</h1>
+  <p>Review COVID-19 travel restrictions before you book.</p>
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <h2><% @islands.each do |island| %>
+        <%= link_to island.name, island_path(island) %>
+        <% end %>
+      </h2>
+      <p>Product description with <strong>relevant info</strong> only.</p>
+      <div>
+        <h2 class="card-pricing">€99.99</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<br>

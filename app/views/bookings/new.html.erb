@@ -1,11 +1,14 @@
-<div class="container">
-  <h1>Make a booking</h1>
+<div class="container_new">
+  <div class="booking_card">
+    <h1>Make a booking</h1>
 
-  <div>
-      <%= simple_form_for [@island, @booking] do |f| %>
-        <%= f.input :start_time %><br>
-        <%= f.input :end_time %><br>
-        <%= f.submit "Make a booking", class: "btn btn-primary mt-3 pr-3" %>
-      <% end %>
+    <div>
+        <%= simple_form_for [@island, @booking] do |f| %>
+          <%= f.input :start_time %><br>
+          <%= f.input :end_time %><br>
+          <%= f.submit "Make a booking", class: "btn btn-primary" %>
+        <% end %>
+    </div>
   </div>
+
 </div>
