@@ -21,6 +21,12 @@ class BookingsController < ApplicationController
       render :new
     end
   end
+  
+  def show
+    @island = Island.find(params[:island_id])
+    @booking = Booking.find(params[:id])
+    @booking.island = @island
+  end
 
   def destroy
     @booking = Booking.find(params[:id])
@@ -29,7 +35,6 @@ class BookingsController < ApplicationController
     redirect_to islands_path, notice: 'Your booking has been deleted'
     #redirect_to [@island, @booking], notice: 'Your booking has been deleted!'
   end
-
 
   private
 
