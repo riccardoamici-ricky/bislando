@@ -2,7 +2,8 @@
   <h1>All our islands</h1>
   <ul>
     <% @islands.each do |island| %>
-    <li><%= island.name %></li>
+    <li><%= link_to island.name, island_path(island) %></li>
     <% end %>
   </ul>
 </div>
+

@@ -16,6 +16,12 @@ class BookingsController < ApplicationController
     end
   end
 
+  def show
+    @island = Island.find(params[:island_id])
+    @booking = Booking.find(params[:id])
+    @booking.island = @island
+  end
+
   private
 
   def booking_params
