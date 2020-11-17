@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Create a new island</h1>
+  <%= simple_form_for @island do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :type_of_event %>
+  <%= f.input :capacity %>
+  <%= f.input :photo, as: :file %>
+<%= f.submit "Post new island", class: "btn btn-primary" %>
+  <% end %>
+</div>
