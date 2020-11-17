@@ -1,6 +1,9 @@
 <div class="container">
   <h1><%= @island.name %></h1>
   <div class="island-info">
+    <% if @island.photo.attached? %>
+      <%= cl_image_tag @island.photo.key, height: 300, width: 400, crop: :fill, class: "island-show-image" %>
+    <% end %>
     <div class="island">
       <ul>
         <h1>Learn more about this island:</h1>
@@ -13,3 +16,7 @@
   </div>
   <%= link_to "Back to list", '/islands' %>
 </div>
+
+
+
+
