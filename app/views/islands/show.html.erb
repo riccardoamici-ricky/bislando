@@ -1,0 +1,15 @@
+<div class="container">
+  <h1><%= @island.name %></h1>
+  <div class="island-info">
+    <div class="island">
+      <ul>
+        <h1>Learn more about this island:</h1>
+        <li><%= @island.description %></li>
+        <li><%= @island.price %>€</li>
+        <li>capacity: <%= @island.capacity %> people</li>
+        <li>suitable for: <%= @island.type_of_event %></li>
+      </ul>
+    </div>
+  </div>
+  <%= link_to "Back to list", '/islands' %>
+</div>
