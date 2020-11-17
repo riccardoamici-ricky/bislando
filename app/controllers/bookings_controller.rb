@@ -7,8 +7,10 @@ class BookingsController < ApplicationController
   def create
     @island = Island.find(params[:island_id])
     @booking = Booking.new(booking_params)
-    if @booking.save
-      redirect_to @booking, notice: 'Your booking was succesfully made.'
+    @booking.user = current_user
+    @booking.island = @island
+    if @booking.save!
+      redirect_to [@island, @booking], notice: 'Your booking was succesfully made.'
     else
       render :new
     end
