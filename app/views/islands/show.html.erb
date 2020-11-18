@@ -1,22 +1,46 @@
-<div class="container">
-  <h1><%= @island.name %></h1>
-  <div class="island-info">
-    <% if @island.photo.attached? %>
-      <%= cl_image_tag @island.photo.key, height: 300, width: 400, crop: :fill, class: "island-show-image" %>
-    <% end %>
-    <div class="island">
-      <ul>
-        <h1>Learn more about this island:</h1>
-        <li><%= @island.description %></li>
-        <li><%= @island.price %>€</li>
-        <li>capacity: <%= @island.capacity %> people</li>
-        <li>suitable for: <%= @island.type_of_event %></li>
-      </ul>
+<div class="container-wide">
+  <h1 class="title"><%= @island.name %></h1>
+  <div class="island-and-booking">
+    <div class="island-info">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <% if @island.photos.attached? %>
+            <% @island.photos.each_with_index do |photo, index| %>
+              <div class="carousel-item <%= "active" if index == 0 %>">
+              <%= cl_image_tag photo.key, :class => "d-block w-100" %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <div class="booking-and-info">
+      <div class="island">
+        <ul>
+          <h1>Learn more about this island:</h1>
+          <li><%= @island.description %></li>
+          <li><%= @island.price %>€</li>
+          <li>capacity: <%= @island.capacity %> people</li>
+          <li>suitable for: <%= @island.type_of_event %></li>
+        </ul>
+      </div>
+      <div class="booking">
+        <%= render "bookings/form_bookings.html.erb" %>
+      </div>
     </div>
   </div>
-  <%= link_to "Back to list", '/islands' %>
+  <div class="anchor-link">
+    <%= link_to "Back to list", '/islands' %>
+  </div>
 </div>
-
-
+</div>
 
 

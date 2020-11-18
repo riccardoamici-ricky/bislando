@@ -6,7 +6,7 @@
   <%= f.input :price %>
   <%= f.input :type_of_event %>
   <%= f.input :capacity %>
-  <%= f.input :photo, as: :file %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
 <%= f.submit "Post new island", class: "btn btn-primary" %>
   <% end %>
   <br><br><br><br>
