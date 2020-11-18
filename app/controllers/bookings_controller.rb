@@ -16,12 +16,12 @@ class BookingsController < ApplicationController
     if @booking.save!
       #redirect_to [@island, @booking], notice: 'Your booking was succesfully made.'
       #code to be modified when we can access booking/show ---> WE CAN PUT BACK THE LINE ABOVE
-      redirect_to @island, notice: 'Your booking was succesfully made.'
+      redirect_to  my_bookings_path, notice: 'Your booking was succesfully made.'
     else
       render :new
     end
   end
-  
+
   def show
     @island = Island.find(params[:island_id])
     @booking = Booking.find(params[:id])
