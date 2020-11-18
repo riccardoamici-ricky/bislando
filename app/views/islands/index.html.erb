@@ -10,8 +10,8 @@
 <div class="container">
   <% @islands.each do |island| %>
     <div class="card-product">
-      <% if island.photo.attached? %>
-      <%= cl_image_tag island.photo.key,  crop: :fill %>
+      <% if island.photos.attached? %>
+      <%= cl_image_tag island.photos[0].key,  crop: :fill %>
       <% end %>
       <div class="card-product-infos">
         <h2><%= link_to island.name, island_path(island) %></h2>
