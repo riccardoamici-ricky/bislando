@@ -1,13 +1,31 @@
-.banner {
+.banner_index {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
   height: 400px;
-  h1{
-    color: white;
-    text-align: center;
-    font-size: 80px;
-    letter-spacing: 30px;
-  }
+    h1{
+      color: white;
+      text-align: center;
+      font-size: 80px;
+      letter-spacing: 30px;
+      text-shadow: 2px 2px gray;
+
+    }
 }
 
+.banner_home {
+  background-image: asset-url("island_home.jpg");
+  background-size: cover;
+  background-position: top;
+  padding: 150px 0;
+  height: 750px;
+  width: 100%;
+  margin-top: -66px;
+    h1 {
+      color: white;
+        text-align: center;
+        font-size: 80px;
+        letter-spacing: 30px;
+        text-shadow: 2px 2px gray;
+    }
+}

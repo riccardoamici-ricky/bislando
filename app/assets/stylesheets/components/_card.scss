@@ -10,6 +10,7 @@
   border-bottom: 1px solid #a2a2a2;
   padding-top: 20px;
   padding-bottom: 20px;
+  position: relative;
 }
 
 .card-product img {
@@ -35,8 +36,13 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+
 }
 
 .card-pricing {
   text-align: right;
+    position: absolute;
+    right: 16px;
+    top: 260px;
+    width: 140px;
 }
