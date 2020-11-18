@@ -1,5 +1,7 @@
 class IslandsController < ApplicationController
-  
+  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: :show
+
   def index
     @islands = Island.all
   end
