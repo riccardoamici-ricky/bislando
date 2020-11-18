@@ -1,12 +1,40 @@
+
+
 .footer {
-  bottom:0;
-  margin: 0 auto;
-  margin-top: 24px;
-  padding-top: 14px;
-  padding-bottom: 10px;
-  width: 100%;
-  background-color: $acqua;
-    .row{
-      padding: 40px;
-    }
+ // /background: $acqua;
+ //  display: flex;
+ //  align-items: center;
+ //  justify-content: space-between;
+ //  height: 100px;
+ //  padding: 0px 50px;
+ //  color: rgba(0,0,0,0.3);
+ //  position: fixed;
+ //  bottom: 0;
+ //  width: 100%;
+ bottom:0;
+ margin: 0 auto;
+ margin-top: 24px;
+ padding-top: 14px;
+ padding-bottom: 10px;
+ width: 100%;
+ background-color: $acqua;
+   .row{
+     padding: 40px;
+   }
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: blue;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 0.15;
+}
+.footer .fa-heart {
+  color: #D23333;
 }

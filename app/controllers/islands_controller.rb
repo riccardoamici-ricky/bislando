@@ -1,5 +1,13 @@
 class IslandsController < ApplicationController
 
+  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: :show
+
+
+   def my_islands
+    @islands = Island.where(user: current_user)
+  end
+
   def index
     @islands = Island.all
   end
@@ -22,6 +30,26 @@ class IslandsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @user = current_user
+    @island = Island.find(params[:id])
+    @island.user = @user
+
+  end
+
+  def update
+    @island = Island.find(params[:id])
+    @island.update(island_params)
+    redirect_to root_path(@island)
+  end
+
+  def destroy
+    @island = Island.find(params[:id])
+    @island.destroy
+    redirect_to islands_path, notice: 'Your island has been deleted'
+    #redirect_to [@island, @booking], notice: 'Your booking has been deleted!'
   end
 
   private
