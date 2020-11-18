@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Edit your island</h1>
+    <%= simple_form_for @island do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :type_of_event %>
+    <%= f.input :capacity %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Update", class: "btn btn-primary" %>
+    <% end %>
+  <br><br><br><br>
+</div>
