@@ -1,6 +1,6 @@
 class Island < ApplicationRecord
   has_many :bookings
-  has_one_attached :photo
+  has_many_attached :photos
   belongs_to :user
 
   geocoded_by :address
