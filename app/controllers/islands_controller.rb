@@ -4,8 +4,6 @@ class IslandsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   skip_before_action :authenticate_user!, only: :show
 
-
-
   def index_my_islands
     @islands = policy_scope(Island).where(user: current_user)
     #authorize @island
@@ -15,7 +13,7 @@ class IslandsController < ApplicationController
     @islands = policy_scope(Island).order(created_at: :desc)
     @islands = Island.all
 
-    @markers = @islands.geocoded.map do |flat|
+    @markers = @islands.geocoded.map do |island|
       {
         lat: island.latitude,
         lng: island.longitude,
