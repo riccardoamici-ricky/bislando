@@ -15,7 +15,7 @@ class IslandsController < ApplicationController
     @islands = policy_scope(Island).order(created_at: :desc)
     @islands = Island.all
 
-    @markers = @islands.geocoded.map do |flat|
+    @markers = @islands.geocoded.map do |island|
       {
         lat: island.latitude,
         lng: island.longitude,
