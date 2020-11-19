@@ -20,9 +20,8 @@ puts 'creating users'
 puts 'users created'
 
 puts 'now creating islands'
-
 file = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605713826/7x0647d4tg9zr040k0hjg2u20j5o.jpg')
-borabora = Island.create!(user: laura, name: 'Bora Bora', description: 'It is so romantic', price: 10000000, type_of_event: "Wedding party", capacity: 35)
+borabora = Island.create!(user: laura, name: 'Bora Bora', description: 'It is so romantic', price: 10000000, type_of_event: "Wedding party", capacity: 35, address: "Bora Bora, French Polynesia, Oceania")
 borabora.photos.attach(io: file, filename: 'borabora.jpg', content_type: 'image/jpg')
 file = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605543915/sample.jpg')
 insel = Island.create!(user: laura, name: 'Insel Lindweder', description: "We've got the best sound-system for your Techno parties", price: 5000, type_of_event: "Techno party", capacity: 100)
