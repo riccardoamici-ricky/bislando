@@ -14,7 +14,18 @@ class IslandsController < ApplicationController
   def index
     @islands = policy_scope(Island).order(created_at: :desc)
     @islands = Island.all
+
+    @markers = @islands.geocoded.map do |flat|
+      {
+        lat: island.latitude,
+        lng: island.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { island: island }),
+        image_url: helpers.asset_url('avatar.jpg')
+      }
+    end
+
     @islands = Island.where("address ILIKE ?", "%#{params[:query]}%") if params[:query].present?
+
   end
 
   def show
