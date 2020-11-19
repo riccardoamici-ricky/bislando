@@ -1,26 +1,34 @@
-<div class="banner_index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn.cnn.com/cnnnext/dam/assets/180219103122-zanzibar-and-its-islands---mnemba-a-view-from-the-sky-mnemba-island-lodge.jpg);">
-  <div class="container">
-    <h1 class="banner-h1">BISLANDO</h1>
-  </div>
-</div><br>
-<div class="container">
-  <h2>Check out our islands. They are COVID free</h2><br>
-  <p>Review COVID-19 travel restrictions before you book.</p>
-</div>
-<div class="container">
-  <% @islands.each do |island| %>
-    <div class="card-product">
-      <% if island.photos.attached? %>
-      <%= cl_image_tag island.photos[0].key,  crop: :fill %>
-      <% end %>
-      <div class="card-product-infos">
-        <h2><%= link_to island.name, island_path(island) %></h2>
-        <p><%= island.description %></p>
-        <h2 class="card-pricing"><%= island.price %> €</h2>
-      </div>
+  <div class="banner_index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn.cnn.com/cnnnext/dam/assets/180219103122-zanzibar-and-its-islands---mnemba-a-view-from-the-sky-mnemba-island-lodge.jpg);">
+    <div class="container">
+      <h1 class="banner-h1">BISLANDO</h1>
     </div>
-  <% end %>
-</div>
+  </div>
+  <br>
+  <div class="headline">
+    <h2>Check out our islands. They are COVID free</h2><br>
+    <p>Review COVID-19 travel restrictions before you book.</p>
+  </div>
+<div class="index">
+    <div class="container">
+      <% @islands.each do |island| %>
+        <div class="card-product">
+          <% if island.photos.attached? %>
+          <%= cl_image_tag island.photos[0].key,  crop: :fill %>
+          <% end %>
+          <div class="card-product-infos">
+            <h2><%= link_to island.name, island_path(island) %></h2>
+            <p><%= island.description %></p>
+            <h2 class="card-pricing"><%= island.price %> €</h2>
+          </div>
+        </div>
+      <% end %>
+    </div>
 
+    <div id="map"
+      style="width: 100%; height: 100vh;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+</div>
 
 

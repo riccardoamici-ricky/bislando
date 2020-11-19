@@ -4,12 +4,21 @@ class IslandsController < ApplicationController
   skip_before_action :authenticate_user!, only: :show
 
 
-   def my_islands
+  def my_islands
     @islands = Island.where(user: current_user)
   end
 
   def index
     @islands = Island.all
+
+    @markers = @islands.geocoded.map do |flat|
+      {
+        lat: island.latitude,
+        lng: island.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { island: island }),
+        image_url: helpers.asset_url('avatar.jpg')
+      }
+    end
   end
 
   def show
