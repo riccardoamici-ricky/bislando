@@ -1,15 +1,14 @@
 class IslandsController < ApplicationController
-
   skip_before_action :authenticate_user!, only: :index
   skip_before_action :authenticate_user!, only: :show
 
-
-   def my_islands
+  def my_islands
     @islands = Island.where(user: current_user)
   end
 
   def index
     @islands = Island.all
+    @islands = Island.where("address ILIKE ?", "%#{params[:query]}%") if params[:query].present?
   end
 
   def show
