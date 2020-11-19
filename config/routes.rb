@@ -6,10 +6,10 @@ Rails.application.routes.draw do
     resources :bookings, only: [:create, :show, :new]
   end
   resources :bookings, only: [:destroy]
-  get "my_bookings", to: "bookings#my_bookings"
+  get "my_bookings", to: "bookings#index"
 
   resources :islands, only: [:edit, :destroy]
   get "my_islands/:id/edit", to: "islands#edit"
-  get "my_islands", to: "islands#my_islands"
+  get "my_islands", to: "islands#index_my_islands"
 
 end
