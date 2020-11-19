@@ -1,9 +1,14 @@
+.navbar {
+  background-color: $transparent !important;
+}
 .banner {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
 }
-
+.banner_home{
+  margin-top: -66px;
+}
 .banner h1 {
   margin: 0;
   color: white;
@@ -11,10 +16,38 @@
   font-size: 32px;
   font-weight: bold;
 }
-
 .banner p {
   font-size: 20px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}// Specific CSS for your home-page
+}
+.container-beige{
+  background-color: $light-gray;
+}
+.container-sand{
+  // padding: 0px 400px;
+  background-image: url("https://images.pexels.com/photos/3297593/pexels-photo-3297593.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: cover;
+  background-position: center;
+  background-color: $white;
+  padding-bottom: 50px;
+  // height: 500px;
+}
+.icons{
+  font-size: 150px;
+  color: $white;
+}
+.text-next-door{
+  width: 200px;
+  text-align: justify;
+  p{
+    font-size: 18px;
+  }
+}
+.text-banner{
+  background-color: $acqua;
+  color: $white;
+  text-align: center;
+  padding: 15px;
+}

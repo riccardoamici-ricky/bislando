@@ -1,4 +1,5 @@
 class IslandsController < ApplicationController
+
   after_action :verify_authorized, only: :my_islands
   skip_before_action :authenticate_user!, only: :index
   skip_before_action :authenticate_user!, only: :show
@@ -12,7 +13,8 @@ class IslandsController < ApplicationController
 
   def index
     @islands = policy_scope(Island).order(created_at: :desc)
-    #@islands = Island.all
+    @islands = Island.all
+    @islands = Island.where("address ILIKE ?", "%#{params[:query]}%") if params[:query].present?
   end
 
   def show

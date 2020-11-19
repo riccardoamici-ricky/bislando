@@ -1,0 +1,10 @@
+.button-search {
+  transition-duration: 0.4s;
+  background-color: $red;
+  padding: 20px;
+}
+
+.button-search:hover {
+  background-color: $light-gray;
+  color: $black;
+}
