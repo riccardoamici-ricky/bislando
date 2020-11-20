@@ -1,5 +1,6 @@
 <div class="container-wide">
   <h1 class="title"><%= @island.name %></h1>
+  <h6><%= @island.address %></h6>
   <div class="island-and-booking">
     <div class="island-info">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -25,16 +26,34 @@
     <div class="booking-and-info">
       <div class="island">
         <ul>
-          <h1>Learn more about this island:</h1>
-          <li>Description<%= @island.description %></li>
-          <li>Price<%= @island.price %>€</li>
-          <li>capacity: <%= @island.capacity %> people</li>
-          <li>suitable for: <%= @island.type_of_event %></li>
+
+          <h2>Party in the heart of <%= @island.name %></h2>
+          <li>
+            <div class="icons"><i class="fas fa-asterisk"></i></div>
+            <%= @island.description %>
+          </li>
+          <li>
+            <div class="icons"><i class="fas fa-dollar-sign"></i></div>
+            You can rent this island for <%= @island.price %>€/day.<br>You will basically become the owner of the island for the duration of your stay.
+          </li>
+          <li>
+            <div class="icons"><i class="fas fa-users"></i></div>
+            This island has a capacity of <%= @island.capacity %> people.<br>Follow all safety protocols as directed by local authorities.
+          </li>
+          <li>
+            <div class="icons"><i class="fas fa-shapes"></i></div>
+            Your best type of party in <%= @island.name %> is <%= @island.type_of_event %>
+          </li>
         </ul>
       </div>
       <div class="booking">
         <%= render "bookings/form_bookings.html.erb" %>
       </div>
+    </div>
+    <div id="map"
+      style="width: 80%; height: 40vh; margin-left: 150px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
   <div class="anchor-link">
