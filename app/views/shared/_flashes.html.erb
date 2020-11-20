@@ -1,9 +1,53 @@
-<% if notice %>
-  <div class="alert alert-info alert-dismissible" role="alert">
+<% if notice && notice == 'create' %>
+    <div class="alert alert-success alert-dismissible" role="alert">
+      <h4 class="alert-heading">GOOD JOB!😎</h4>
+      <p> We have sent you an 📧 confirming your <a href="/my_bookings" class="alert-link">booking</a></p>
+
+
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  Get ready to 🎉 PARTY 🎉
+    </div>
+<% end %>
+
+<% if notice && notice == 'destroy' %>
+    <div class="alert alert-danger alert-dismissible" role="alert">
+      <h4 class="alert-heading">THAT'S TOO BAD! 😕</h4>
+      <p> Want to check out other islands? Click <a href="/islands" class="alert-link">here</a></p>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    </div>
+<% end %>
+  <!-- <div class="alert alert-info alert-dismissible" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <%= notice %>
-  </div>
+  </div> -->
+
+<% if notice && notice == 'create_island' %>
+    <div class="alert alert-success alert-dismissible" role="alert">
+      <h4 class="alert-heading">THAT LOOKS AWESOME!😎</h4>
+      <p> Prepare to host awesome parties! To edit your island, visit <a href="/my_islands" class="alert-link">My Islands</a></p>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    </div>
 <% end %>
+
+<% if notice && notice == 'destroy_island' %>
+    <div class="alert alert-danger alert-dismissible" role="alert">
+      <h4 class="alert-heading">WE WILL MISS YOU! 😕</h4>
+      <p> Wanna throw a party on one of our islands? Click <a href="/islands" class="alert-link">here</a></p>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    </div>
+<% end %>
+
+<% if notice && notice == 'update_island' %>
+    <div class="alert alert-warning alert-dismissible" role="alert">
+      <h4 class="alert-heading">THAT'S NICE! 🤩</h4>
+      <p> You have successfully updated your island. Check it out <a href="/my_islands" class="alert-link">here</a></p>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    </div>
+<% end %>
+
+
+
+
 <% if alert %>
   <div class="alert alert-warning alert-dismissible" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
