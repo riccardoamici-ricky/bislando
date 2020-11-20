@@ -40,6 +40,7 @@ file5 = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605823537/
 file6 = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605823537/pexels-fabian-wiktor-994605_ie9xuq.jpg')
 filee = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605823544/pexels-marcin-dampc-1684187_x3nbzb.jpg')
 filef = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605823550/pexels-wendy-wei-1537638_qolxh0.jpg')
+
 goa = Island.create!(user: laura, name: 'Chorao', description: 'Goa parties, get colorful, get psyched! For you and your friends the possibility to wear the colors of the rainbow and dance from dawn till dusk. A welcome bowl of rice is included.', price: 50000, type_of_event: "Goa party", capacity: 200, address: "Chorao, India")
 goa.photos.attach([{io: file5, filename: 'goa.jpg', content_type: 'image/jpg'}, {io: file6, filename: 'goaparty.jpg', content_type: 'image/jpg'}, {io: filee, filename: 'goaparty3.jpg', content_type: 'image/jpg'}, {io: filef, filename: 'goaparty4.jpg', content_type: 'image/jpg'}])
 
@@ -47,6 +48,7 @@ file7 = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605824256/
 file8 = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605824248/pexels-tom-swinnen-2347450_c7jr1c.jpg')
 file9 = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605824258/pexels-jill-wellington-40815_mtgcwn.jpg')
 fileg = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605824262/pexels-luca-nardone-3651615_hk9q9f.jpg')
+
 sanmiguel = Island.create!(user: laura, name: 'San Miguel', description: 'Party in the nature, no one will bother you. Be crazy, be funny, be yourself. We offer you a bacalhau for your birthday!', price: 10000000, type_of_event: "Birthday party", capacity: 50, address: "San Miguel, Azores, Portugal")
 sanmiguel.photos.attach([{io: file7, filename: 'sm.jpg', content_type: 'image/jpg'}, {io: file8, filename: 'sm2.jpg', content_type: 'image/jpg'}, {io: file9, filename: 'sms.jpg', content_type: 'image/jpg'}, {io: fileg, filename: 'migpartys.jpg', content_type: 'image/jpg'}])
 
@@ -54,14 +56,18 @@ file10 = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605824615
 file11 = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605824621/pexels-allphoto-bangkok-4614028_jtxbmw.jpg')
 fileh = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605824622/pexels-bayu-jefri-1387037_pvkjcr.jpg')
 filei = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605824624/pexels-cottonbro-4430307_govdu8.jpg')
+
 krong = Island.create!(user: ricky, name: 'Koh Rong', description: 'Dance your feet off under the moon. It happens once a month so be sure to reserve during full-moon, we do not guarantee sky visibility.', price: 800000, type_of_event: "Full moon party", capacity: 300, address: "Koh Rong, Cambodia")
+
 krong.photos.attach([{io: file10, filename: 'koh.jpg', content_type: 'image/jpg'}, {io: file11, filename: 'kohparty1.jpg', content_type: 'image/jpg'}, {io: fileh, filename: 'koh2.jpg', content_type: 'image/jpg'}, {io: filei, filename: 'koh.jpg', content_type: 'image/jpg'}])
 
 file12 = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605825652/pexels-taryn-elliott-5859211_1_ucyd2a.jpg')
 file13 = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605825659/pexels-pok-rie-1726310_l7hhwe.jpg')
 file14 = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605825662/pexels-alex-azabache-3250362_dkcxlz.jpg')
 filej = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605825664/pexels-belle-co-1000445_p5pbab.jpg')
+
 isla = Island.create!(user: ricky, name: 'Isla Providencia', description: 'Come for an unforgettable stag night with your best bros. Drinks not included, but we have a bar which you can use for yourself!', price: 50000000, type_of_event: "Stag party", capacity: 50, address: "Isla de la Providencia, Colombia")
+
 isla.photos.attach([{io: file12, filename: 'is.jpg', content_type: 'image/jpg'}, {io: file13, filename: 'ki.jpg', content_type: 'image/jpg'}, {io: file14, filename: 'ke2.jpg', content_type: 'image/jpg'}, {io: filej, filename: 'ku.jpg', content_type: 'image/jpg'}])
 
 
@@ -74,6 +80,8 @@ file17 = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605825834
 file18 = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605825837/pexels-melanie-wupperman-662994_hh0jdc.jpg')
 filek = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605825932/pexels-asad-photo-maldives-1268855_r47rp2.jpg')
 filel = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605825839/pexels-asad-photo-maldives-1024975_1_ocdpma.jpg')
+
 azura = Island.create!(user: ricky, name: 'Azura', description: 'say YES in heaven! And if you say NO, you can still chill on our awesome beach. Wedding minister not included.', price: 1000000000, type_of_event: "Wedding party", capacity: 200, address: "Ilha de Benguerra, Mozambique")
+
 azura.photos.attach([{io: file17, filename: 'as.jpg', content_type: 'image/jpg'}, {io: file18, filename: 'ai.jpg', content_type: 'image/jpg'}, {io: filek, filename: 'k02.jpg', content_type: 'image/jpg'}, {io: filel, filename: 'kku.jpg', content_type: 'image/jpg'}])
 
