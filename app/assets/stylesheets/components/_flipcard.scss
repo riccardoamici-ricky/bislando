@@ -4,7 +4,7 @@
   background-color: transparent;
   height: 300px;
   width: 400px;
-  border: 1px solid #f1f1f1;
+  // border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -40,6 +40,9 @@
 
 /* Style the back side */
 .flip-card-back {
+  border-radius: 12px;
+  top: 20px;
+  left: -20px;
   background-color: $acqua;
   color: white;
   transform: rotateY(180deg);
