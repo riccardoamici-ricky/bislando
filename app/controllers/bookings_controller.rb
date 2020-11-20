@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
     @island = Island.find(params[:island_id])
     @booking = Booking.new
     authorize @booking
+
   end
 
   def create
@@ -27,9 +28,10 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @booking
     if @booking.save!
+
       #redirect_to [@island, @booking], notice: 'Your booking was succesfully made.'
       #code to be modified when we can access booking/show ---> WE CAN PUT BACK THE LINE ABOVE
-      redirect_to  my_bookings_path, notice: 'Your booking was succesfully made.'
+      redirect_to islands_path, notice: 'create'
     else
       render :new
     end
@@ -39,7 +41,7 @@ class BookingsController < ApplicationController
     # @booking = Booking.find(params[:id])
     # @island = @booking.island
     @booking.destroy
-    redirect_to islands_path, notice: 'Your booking has been deleted'
+    redirect_to root_path, notice: 'destroy'
     authorize @booking
     #redirect_to [@island, @booking], notice: 'Your booking has been deleted!'
   end

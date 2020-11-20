@@ -1,5 +1,5 @@
 .navbar {
-  background-color: $white !important;
+  background-color: $acqua !important;
 }
 .navbar-lewagon {
   justify-content: space-between;
@@ -11,4 +11,10 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.nav-home {
+  a {
+    color: white !important;
+  }
 }

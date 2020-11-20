@@ -34,11 +34,23 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initMapbox();
+  var element = document.querySelector(".door");
+
+//   if (element) {
+//     function toggleDoor() {
+//       element.classList.toggle("doorOpen");
+//     }
+//     element.addEventListener("click", toggleDoor);
+
+//   }
+// });
+
+  element.addEventListener("click", toggleDoor);
+
+  function toggleDoor() {
+    element.classList.toggle("doorOpen");
+  }
+
 });
 
-var element = document.querySelector(".door");
-element.addEventListener("click", toggleDoor);
 
-function toggleDoor() {
-  element.classList.toggle("doorOpen");
-}
