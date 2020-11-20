@@ -30,6 +30,16 @@ class IslandsController < ApplicationController
     @island = Island.find(params[:id])
     authorize @island
     @booking = Booking.new
+    @address = @island.address
+    @islands = Island.near(@address, 100)
+     @markers = @islands.geocoded.map do |island|
+      {
+        lat: island.latitude,
+        lng: island.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { island: island }),
+        image_url: helpers.asset_url('avatar.jpg')
+      }
+    end
   end
 
   def new
