@@ -1,5 +1,5 @@
 body {
-  background-color: $lightbeige;
+  background-color: $light-gray;
 }
 .title{
   text-align: center;
@@ -10,6 +10,7 @@ body {
 }
 .booking-and-info{
   display: flex;
+  margin-top: 30px;
 }
 #carouselExampleControls{
   width: 80%;
@@ -32,15 +33,30 @@ body {
   width: 50%;
   background-color: $light-gray;
   margin-left: 144px;
-  padding: 20px;
+  padding: 0px;
   list-style: none;
   border: 2px solid $light-gray;
   border-radius: 15px;
 }
 .booking{
   margin-left: 20px;
+  border: 1px solid #a2a2a2;
+  border-radius: 15px;
 }
 .anchor-link{
   text-align:center;
   margin-top:30px;
+}
+ul{
+  padding: 0px;
+  list-style: none;
+}
+.icons{
+  font-size: 30px;
+  color: $acqua;
+}
+h6{
+  margin-left: 150px;
+  background: rgb(162,162,162);
+  background: linear-gradient(90deg, rgba(162,162,162,1) 35%, rgba(244,244,244,1) 100%);
 }
