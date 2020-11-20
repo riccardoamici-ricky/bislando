@@ -76,13 +76,3 @@ filek = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605825932/
 filel = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605825839/pexels-asad-photo-maldives-1024975_1_ocdpma.jpg')
 azura = Island.create!(user: ricky, name: 'Azura', description: 'say YES in heaven! And if you say NO, you can still chill on our awesome beach. Wedding minister not included.', price: 1000000000, type_of_event: "Wedding party", capacity: 200, address: "Ilha de Benguerra, Mozambique, Africa")
 azura.photos.attach([{io: file17, filename: 'as.jpg', content_type: 'image/jpg'}, {io: file18, filename: 'ai.jpg', content_type: 'image/jpg'}, {io: filek, filename: 'k02.jpg', content_type: 'image/jpg'}, {io: filel, filename: 'kku.jpg', content_type: 'image/jpg'}])
-
-# file19 = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605783191/corvo_hcfiwi.jpg')
-# file20 = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605783192/psycorvo_r52ubv.jpg')
-# corvo = Island.create!(user: peter, name: 'Corvo Island', description: 'Psytrance and a vulcano? Say no more!', price: 800000, type_of_event: "Goa party", capacity: 100, address: "Corvo, Azores, Portugal, Europe")
-# corvo.photos.attach([{io: file19, filename: 'corvo.jpg', content_type: 'image/jpg'}, {io: file20, filename: 'corvoparty.jpg', content_type: 'image/jpg'}])
-
-# file23 = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605783192/mindoro_m1ujuj.jpg')
-# file24 = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605783192/mindoro_parrty_ngxlea.jpg')
-# mindoro = Island.create!(user: peter, name: 'Mindoro', description: 'All the single ladies welcome!', price: 90000000, type_of_event: "Bachelorette party", capacity: 65, address: "Mindoro, Philippines, Asia")
-# mindoro.photos.attach([{io: file23, filename: 'mindoro.jpg', content_type: 'image/jpg'}, {io: file24, filename: 'minparty.jpg', content_type: 'image/jpg'}])
