@@ -13,6 +13,7 @@ class IslandsController < ApplicationController
     @islands = policy_scope(Island).order(created_at: :desc)
     @islands = Island.all
 
+    @islands = Island.where("address ILIKE ?", "%#{params[:query]}%") if params[:query].present?
     @markers = @islands.geocoded.map do |island|
       {
         lat: island.latitude,
@@ -22,7 +23,6 @@ class IslandsController < ApplicationController
       }
     end
 
-    @islands = Island.where("address ILIKE ?", "%#{params[:query]}%") if params[:query].present?
 
   end
 

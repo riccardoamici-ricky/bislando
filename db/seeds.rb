@@ -76,3 +76,4 @@ filek = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605825932/
 filel = URI.open('https://res.cloudinary.com/dsij1zq1l/image/upload/v1605825839/pexels-asad-photo-maldives-1024975_1_ocdpma.jpg')
 azura = Island.create!(user: ricky, name: 'Azura', description: 'say YES in heaven! And if you say NO, you can still chill on our awesome beach. Wedding minister not included.', price: 1000000000, type_of_event: "Wedding party", capacity: 200, address: "Ilha de Benguerra, Mozambique, Africa")
 azura.photos.attach([{io: file17, filename: 'as.jpg', content_type: 'image/jpg'}, {io: file18, filename: 'ai.jpg', content_type: 'image/jpg'}, {io: filek, filename: 'k02.jpg', content_type: 'image/jpg'}, {io: filel, filename: 'kku.jpg', content_type: 'image/jpg'}])
+
