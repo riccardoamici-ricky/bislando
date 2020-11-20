@@ -7,7 +7,7 @@
           <% if @island.photos.attached? %>
             <% @island.photos.each_with_index do |photo, index| %>
               <div class="carousel-item <%= "active" if index == 0 %>">
-              <%= cl_image_tag photo.key, :class => "d-block w-100" %>
+              <%= cl_image_tag photo.key, :class => "d-block w-100 custom-style", style: "object-fit: contain; object-position: 50% 50%;" %>
               </div>
             <% end %>
           <% end %>
